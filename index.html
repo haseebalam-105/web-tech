@@ -15,8 +15,11 @@
     <!-- Your Custom CSS (loads AFTER Bootstrap) -->
     <link rel="stylesheet" href="styles.css">
 </head>
+
+
 <body>
     <!-- Header Section -->
+   
     <header>
         <div class="announcement-bar">
             <div class="container">
@@ -29,157 +32,133 @@
         
         <div class="header-navigation">
             <div class="container">
+                <!-- Hidden Checkbox for Hamburger (CSS Trick) -->
+                <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                
+                <!-- Hamburger Menu Button (Label controls the checkbox) -->
+                <label for="menu-toggle" class="hamburger-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+                
                 <div class="header-logo">
                     <a href="/">
                         <img src="//royaltag.com.pk/cdn/shop/files/Asset_1100_125x.png?v=1771415185" alt="RoyalTag" width="125" height="19">
                     </a>
                 </div>
                 
+                <!-- Main Menu -->
                 <nav class="main-menu">
                     <ul>
                         <li>
-                            <a href="New Arrival link">New Arrivals</a>
+                            <a href="#">New Arrivals</a>
+                            <input type="checkbox" id="dropdown-1" class="dropdown-toggle">
+                            <label for="dropdown-1" class="dropdown-label"></label>
                             <ul>
-                                <li><a href="casual shirt link">Casual Shirt</a></li>
-                                <li><a href="Polo shirt link">Polo Shirt</a></li>
-                                <li><a href="round-neck-shirt link">T-Shirt</a></li>
-                                <li><a href="chino link">Chino</a></li>
-                                <li><a href="basic-5-pocket link">Basic 5 Pocket</a></li>
-                                <li><a href="trouser-pant link">Trouser</a></li>
-                                <li><a href="pajama link">Casual Pajama</a></li>
+                                <li><a href="#">Casual Shirt</a></li>
+                                <li><a href="#">Polo Shirt</a></li>
+                                <li><a href="#">T-Shirt</a></li>
+                                <li><a href="#">Chino</a></li>
+                                <li><a href="#">Basic 5 Pocket</a></li>
+                                <li><a href="#">Trouser</a></li>
+                                <li><a href="#">Casual Pajama</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="/collections/bellezza-formal-main">Suits & Coats</a>
+                            <a href="#">Suits & Coats</a>
+                            <input type="checkbox" id="dropdown-2" class="dropdown-toggle">
+                            <label for="dropdown-2" class="dropdown-label"></label>
                             <ul>
-                                <li><a href="/collections/bellezza-blazers">Casual Coats</a></li>
-                                <li><a href="/collections/bellezza-3-piece-suits">3 Piece Suits</a></li>
-                                <li><a href="/collections/bellezza-2-piece-suits">2 Piece Suits</a></li>
+                                <li><a href="#">Casual Coats</a></li>
+                                <li><a href="#">3 Piece Suits</a></li>
+                                <li><a href="#">2 Piece Suits</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="/collections/bellezza-dress-shirts-dress-pants-05-01-2026">Dress Shirts & Pants</a>
+                            <a href="#">Dress Shirts & Pants</a>
+                            <input type="checkbox" id="dropdown-3" class="dropdown-toggle">
+                            <label for="dropdown-3" class="dropdown-label"></label>
                             <ul>
-                                <li><a href="/collections/solid-dress-shirts">Solid Dress Shirts</a></li>
-                                <li><a href="/collections/patterned-dress-shirts">Patterned Dress Shirts</a></li>
-                                <li><a href="/collections/bellezza-dress-pants">Dress Pants</a></li>
+                                <li><a href="#">Solid Dress Shirts</a></li>
+                                <li><a href="#">Patterned Dress Shirts</a></li>
+                                <li><a href="#">Dress Pants</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="/collections/all-accessories-full-price-01-oct-2025">Accessories</a>
+                            <a href="#">Accessories</a>
+                            <input type="checkbox" id="dropdown-4" class="dropdown-toggle">
+                            <label for="dropdown-4" class="dropdown-label"></label>
                             <ul>
-                                <li><a href="/collections/tie-01-oct-2025">Tie</a></li>
-                                <li><a href="/collections/tie-pin-01-oct-2025">Tie Pin</a></li>
-                                <li><a href="/collections/full-price-scarf">Scarfs</a></li>
-                                <li><a href="/collections/cuff-lines-01-oct-2025">Cuff Links</a></li>
-                                <li><a href="/collections/pocket-square-01-oct-2025">Pocket Square</a></li>
-                                <li><a href="/collections/lapel-pin-01-oct-2025">Lapel Pin</a></li>
-                                <li><a href="/collections/belts-01-oct-2025">Belts</a></li>
-                                <li><a href="/collections/boxer-shorts-01-oct-2025">Boxer Shorts</a></li>
-                                <li><a href="/collections/wallets-01-oct-2025">Wallets</a></li>
+                                <li><a href="#">Tie</a></li>
+                                <li><a href="#">Tie Pin</a></li>
+                                <li><a href="#">Scarfs</a></li>
+                                <li><a href="#">Cuff Links</a></li>
+                                <li><a href="#">Pocket Square</a></li>
+                                <li><a href="#">Lapel Pin</a></li>
+                                <li><a href="#">Belts</a></li>
+                                <li><a href="#">Boxer Shorts</a></li>
+                                <li><a href="#">Wallets</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="/collections/bellezza-tehwar-collection">Tehwar</a>
+                            <a href="#">Tehwar</a>
+                            <input type="checkbox" id="dropdown-5" class="dropdown-toggle">
+                            <label for="dropdown-5" class="dropdown-label"></label>
                             <ul>
-                                <li><a href="/collections/bellezza-shalwar-kameez">Shalwar Kameez</a></li>
-                                <li><a href="/collections/bellezza-waistcoat">Waistcoat</a></li>
-                                <li><a href="/collections/sp126-traditional-pajama">Pajama</a></li>
+                                <li><a href="#">Shalwar Kameez</a></li>
+                                <li><a href="#">Waistcoat</a></li>
+                                <li><a href="#">Pajama</a></li>
                             </ul>
                         </li>
+                        <li><a href="#">Shop Online Only</a></li>
                         <li>
-                            <a href="/collections/exclusive-online-products">Shop Online Only</a>
-                        </li>
-                        <li>
-                            <a href="/collections/main-clearance-sale-upto-50-off-01-oct-2025">SALE</a>
+                            <a href="#">SALE</a>
+                            <input type="checkbox" id="dropdown-6" class="dropdown-toggle">
+                            <label for="dropdown-6" class="dropdown-label"></label>
                             <ul>
-                                <li>
-                                    <a href="/collections/clearance-sale-upto-50-off-all-casuals-01-oct-2025">Casuals</a>
-                                    <ul>
-                                        <li><a href="/collections/clearance-sale-upto-50-off-polo-shirts-01-oct-2025">Polo Shirts</a></li>
-                                        <li><a href="/collections/clearance-sale-upto-50-off-t-shirts-01-oct-2025">T-Shirts</a></li>
-                                        <li><a href="/collections/clearance-sale-upto-50-off-casual-shirts-01-oct-2025">Casual Shirts</a></li>
-                                        <li><a href="/collections/clearance-sale-upto-50-off-trousers-01-oct-2025">Trousers</a></li>
-                                        <li><a href="/collections/clearance-sale-upto-50-off-chino-01-oct-2025">Chinos</a></li>
-                                        <li><a href="/collections/clearance-sale-upto-50-off-jeans-01-oct-2025">Jeans</a></li>
-                                        <li><a href="/collections/clearance-sale-upto-50-off-basic-5-pocket-01-oct-2025">Basic 5 Pockets</a></li>
-                                        <li><a href="/collections/bellezza-pajama">Pajama</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="/collections/clearance-sale-upto-50-off-all-formals-01-oct-2025">Formals</a>
-                                    <ul>
-                                        <li><a href="/collections/clearance-sale-upto-50-off-dress-shirts-01-oct-2025">Dress Shirts</a></li>
-                                        <li><a href="/collections/clearance-sale-upto-50-off-blazers-01-oct-2025">Blazers</a></li>
-                                        <li><a href="/collections/clearance-sale-upto-50-off-2-piece-suit-01-oct-2025">2 Piece Suits</a></li>
-                                        <li><a href="/collections/clearance-sale-upto-50-off-3-piece-suit-01-oct-2025">3 Piece Suits</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="/collections/clearance-sale-upto-50-off-all-tehwar-01-oct-2025">Tehwar</a>
-                                    <ul>
-                                        <li><a href="/collections/clearance-sale-upto-50-off-kurta-01-oct-2025">Kurta</a></li>
-                                        <li><a href="/collections/clearance-sale-upto-50-off-kurta-trouser-01-oct-2025">Kurta Trouser</a></li>
-                                        <li><a href="/collections/clearance-sale-upto-50-off-shalwar-kameez-01-oct-2025">Shalwar Kameez</a></li>
-                                        <li><a href="/collections/clearance-sale-upto-50-off-tehwar-waistcoat-01-oct-2025">Traditional Waistcoast</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="/collections/all-winter">Winter</a>
-                                    <ul>
-                                        <li><a href="/collections/bellezza-upper">Uppers</a></li>
-                                        <li><a href="/collections/hoodie-winter">Hoodies</a></li>
-                                        <li><a href="/collections/jackets-winter">Jackets</a></li>
-                                        <li><a href="/collections/sweater-winter">Sweaters</a></li>
-                                        <li><a href="/collections/bellezza-sweatshirts">Sweatshirts</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="/collections/clearance-sale-upto-50-off-pocket-square-01-oct-2025">Accessories</a>
-                                    <ul>
-                                        <li><a href="/collections/clearance-sale-upto-50-off-tie-with-pocket-square-09-oct-2025">Tie with Pocket Square</a></li>
-                                        <li><a href="/collections/clearance-sale-upto-50-off-pocket-square-01-oct-2025">Pocket Square</a></li>
-                                        <li><a href="/collections/clearance-sale-upto-50-off-wallet-09-oct-2025">Wallets</a></li>
-                                        <li><a href="/collections/tie-discounted">Tie</a></li>
-                                    </ul>
-                                </li>
+                                <li><a href="#">Casuals</a></li>
+                                <li><a href="#">Formals</a></li>
+                                <li><a href="#">Tehwar</a></li>
+                                <li><a href="#">Winter</a></li>
+                                <li><a href="#">Accessories</a></li>
                             </ul>
                         </li>
                     </ul>
                 </nav>
-            <!-- Headers icons -->
+                
+                <!-- Header Icons -->
                 <div class="header-icons">
-                    <!-- Search Icon (click to show search bar) -->
+                    <!-- Search (Always visible) -->
                     <div class="header-search">
-                        <button type="button" class="search-toggle" aria-label="Toggle Search">
+                        <label for="search-toggle" class="search-toggle">
                             <i class="fas fa-search"></i>
-                        </button>
-                        
+                        </label>
+                        <input type="checkbox" id="search-toggle" class="search-toggle-checkbox">
                         <div class="search-form-container">
                             <form action="/search" method="get" role="search">
                                 <input type="search" name="q" placeholder="Search" autocomplete="off">
                                 <button type="submit" aria-label="Search">
                                     <i class="fas fa-search"></i>
                                 </button>
-                                <button type="button" class="search-close">
+                                <label for="search-toggle" class="search-close">
                                     <i class="fas fa-times"></i>
-                                </button>
+                                </label>
                             </form>
                         </div>
                     </div>
                     
-                    <!-- Account with icon -->
                     <a href="/account/login" class="header-account">
                         <i class="far fa-user"></i>
                     </a>
                     
-                    <!-- Cart with icon -->
                     <a href="/cart" class="header-cart">
                         <i class="fas fa-shopping-bag"></i> 
+                        <span class="cart-count">0</span>
                     </a>
+                </div>
             </div>
         </div>
-        
     </header>
 
     <!-- Main Content -->
@@ -188,7 +167,7 @@
         <section class="slideshow">
             <div class="container">
                 <div class="item">
-                    <video>
+                    <video autoplay muted loop playsinline>
                         <source src="https://cdn.shopify.com/videos/c/o/v/c520eb9ed8b0478d8a5bc2c340eca56c.mp4" type="video/mp4">
                         <!--     <source src="images/herovideo.mp4" type="video/mp4">            -->
                     </video>
