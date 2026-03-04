@@ -360,8 +360,14 @@ header {
     scroll-snap-align: start;
 }
 
-.slideshow .item video,
-.slideshow .item img {
+.slideshow .item video {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.slideshow .container .item {
     width: 100%;
     height: auto;
     border-radius: 8px;
