@@ -193,7 +193,121 @@ header {
 .header-search button:hover {
     color: #202020;
 }
+/* CSS code for the icons */
+/* ===== SEARCH TOGGLE STYLES ===== */
+.header-search {
+    position: relative;
+}
 
+.search-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #202020;
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.search-toggle:hover {
+    background-color: #f5f5f5;
+}
+
+.search-toggle i {
+    font-size: 16px;
+}
+
+.search-form-container {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 300px;
+    background-color: #ffffff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    padding: 10px;
+    display: none;
+    z-index: 1000;
+}
+
+.search-form-container.active {
+    display: block;
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.search-form-container form {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.search-form-container input {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    font-size: 14px;
+    outline: none;
+}
+
+.search-form-container input:focus {
+    border-color: #002855;
+}
+
+.search-form-container button[type="submit"] {
+    background-color: #002855;
+    color: #ffffff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-form-container button[type="submit"]:hover {
+    background-color: #1f3a37;
+}
+
+.search-close {
+    background: none;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.search-close:hover {
+    background-color: #f5f5f5;
+    color: #232323;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .search-form-container {
+        position: fixed;
+        top: 60px;
+        left: 10px;
+        right: 10px;
+        width: auto;
+    }
+}
 .header-account,
 .header-cart {
     display: flex;

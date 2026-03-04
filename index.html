@@ -4,7 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Men's Formal & Casual Wear Brand | Royal Tag</title>
-    <meta name="description" content="Royal Tag is top men's clothing brand in Pakistan. Royal Tag offers premium men suiting, smart formal dressing solutions and leisure clothing for men in Pakistan. Royal Tag's Tehwar Collection is best Shalwar Kameez and Kurta collection in Pakistan.">
+    <meta name="description" content="Royal Tag is top men's clothing brand in Pakistan...">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    
+    <!-- Your Custom CSS (loads AFTER Bootstrap) -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -141,28 +147,33 @@
                 </nav>
             <!-- Headers icons -->
                 <div class="header-icons">
-                    <!-- Search with icon -->
+                    <!-- Search Icon (click to show search bar) -->
                     <div class="header-search">
-                        <form action="/search" method="get" role="search">
-                            <input type="search" name="q" placeholder="Search" autocomplete="off">
-                            <button type="submit" aria-label="Search">
-                                <i class="fas fa-search"></i> <!-- Search icon -->
-                                <span class="search-text">Search</span>
-                            </button>
-                        </form>
+                        <button type="button" class="search-toggle" aria-label="Toggle Search">
+                            <i class="fas fa-search"></i>
+                        </button>
+                        
+                        <div class="search-form-container">
+                            <form action="/search" method="get" role="search">
+                                <input type="search" name="q" placeholder="Search" autocomplete="off">
+                                <button type="submit" aria-label="Search">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                                <button type="button" class="search-close">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </form>
+                        </div>
                     </div>
                     
                     <!-- Account with icon -->
                     <a href="/account/login" class="header-account">
-                        <i class="far fa-user"></i> <!-- User outline icon -->
-                        <span class="account-text">Account</span>
+                        <i class="far fa-user"></i>
                     </a>
                     
                     <!-- Cart with icon -->
                     <a href="/cart" class="header-cart">
-                        <i class="fas fa-shopping-bag"></i> <!-- Shopping bag icon -->
-                        <span class="cart-text">Cart</span>
-                        <span class="cart-count">0</span>
+                        <i class="fas fa-shopping-bag"></i> 
                     </a>
             </div>
         </div>
@@ -888,7 +899,7 @@
                                     <span class="badge new-badge">New</span>
                                 </div>
                                 <div class="card-media">
-                                    <img src="images/festive-product4.webp" alt="Off White Sovereign Shalwar Kameez">
+                                    <img src="images/festive-product4.jpg" alt="Off White Sovereign Shalwar Kameez">
                                     <img src="images/festive-product4-2.webp" alt="Off White Sovereign Shalwar Kameez">
                                 </div>
                                 <a href="/products/sk251142-ow" title="Off White Sovereign Shalwar Kameez"></a>
