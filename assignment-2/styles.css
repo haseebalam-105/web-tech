@@ -342,9 +342,6 @@ header {
 }
 
 /* ===== MOBILE STYLES (PURE CSS) ===== */
-
- /*for the tabs  */
- 
 @media (max-width: 1024px) {
     .header-navigation .container {
         flex-wrap: wrap;
@@ -379,26 +376,26 @@ header {
         transition: left 0.3s ease;
     }
     
-    /* Show menu when checkbox is checked */
-    #menu-toggle:checked ~ .main-menu {
+    /* Show menu when active class is added via JS */
+    .main-menu.active {
         left: 0;
     }
     
-    /* Hamburger animation when menu is open */
-    #menu-toggle:checked ~ .hamburger-menu span:nth-child(1) {
+    /* Hamburger animation when menu is open (active class) */
+    .hamburger-menu.active span:nth-child(1) {
         transform: translateY(9px) rotate(45deg);
     }
     
-    #menu-toggle:checked ~ .hamburger-menu span:nth-child(2) {
+    .hamburger-menu.active span:nth-child(2) {
         opacity: 0;
     }
     
-    #menu-toggle:checked ~ .hamburger-menu span:nth-child(3) {
+    .hamburger-menu.active span:nth-child(3) {
         transform: translateY(-9px) rotate(-45deg);
     }
     
-    /* Overlay when menu is open */
-    #menu-toggle:checked ~ .main-menu::before {
+    /* Overlay when menu is open (active class) */
+    .main-menu.active::before {
         content: '';
         position: fixed;
         top: 0;
@@ -490,8 +487,6 @@ header {
     }
 }
 
-/*for the mobiles */
-
 @media (max-width: 768px) {
     /* Announcement Bar */
     .announcement-bar .container {
@@ -573,8 +568,6 @@ header {
         justify-content: center;
     }
 }
-
-/*for the small phones */
 
 @media (max-width: 480px) {
     .products-grid {
