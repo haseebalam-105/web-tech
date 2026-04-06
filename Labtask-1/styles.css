@@ -1,4 +1,4 @@
-/* ===== RESET & BASE STYLES ===== */
+/* ===== RESET & BASE STYLES ============================ */
 * {
     margin: 0;
     padding: 0;
@@ -36,8 +36,7 @@ img {
     display: block;
 }
 
-/* ===== ANNOUNCEMENT BAR ===== */
-
+/* ===== ANNOUNCEMENT BAR ============================ */
 .announcement-bar {
     background-color: #1f3a37;
     padding: 5px 0;
@@ -63,7 +62,7 @@ img {
     margin-right: 30px;
 }
 
-/* ===== HEADER STYLES ===== */
+/* ===== HEADER STYLES ========================================= */
 header {
     background-color: #ffffff;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -87,15 +86,14 @@ header {
     height: auto;
 }
 
-/* ===== HEADER ICONS ===== */
+/* ===== HEADER ICONS ================================== */
 .header-icons {
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
-.header-account,
-.header-cart {
+.header-account,.header-cart {
     display: flex;
     align-items: center;
     gap: 5px;
@@ -135,7 +133,7 @@ header {
     right: -8px;
 }
 
-/* ===== MAIN MENU STYLES (DESKTOP) ===== */
+/* ===== MAIN MENU STYLES (DESKTOP) ============================ */
 .main-menu > ul {
     display: flex;
     gap: 20px;
@@ -199,7 +197,7 @@ header {
 }
 
 .main-menu ul ul a:hover {
-    background-color: #f5f5f5;
+    background-color: #988cd7;
 }
 
 /* ===== HAMBURGER MENU - PURE CSS ===== */
@@ -234,7 +232,7 @@ header {
     display: none;
 }
 
-/* ===== SEARCH TOGGLE - PURE CSS ===== */
+/* ===== SEARCH TOGGLE - PURE CSS ======================= */
 .header-search {
     position: relative;
 }
@@ -278,75 +276,35 @@ header {
     z-index: 1000;
 }
 
-/* Show search form when checkbox is checked */
-#search-toggle:checked ~ .search-form-container {
-    display: block;
-    animation: slideDown 0.3s ease;
-}
 
-@keyframes slideDown {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+/* ===== MOBILE STYLES (PURE CSS - FLEX VERSION) ===== */
 
-.search-form-container form {
+/* ===== COMMON FLEX SETUP ===== */
+.products-grid,
+.reviews-grid,
+.halo-row {
     display: flex;
-    align-items: center;
-    gap: 5px;
+    flex-wrap: wrap;
+    gap: 16px;
 }
 
-.search-form-container input {
-    flex: 1;
-    padding: 8px 12px;
-    border: 1px solid #e0e0e0;
-    border-radius: 4px;
-    font-size: 14px;
-    outline: none;
+/* Default (Desktop) */
+.products-grid .product {
+    flex: 0 0 calc(25% - 16px); /* 4 per row */
 }
 
-.search-form-container input:focus {
-    border-color: #002855;
+.reviews-grid .review {
+    flex: 0 0 calc(33.33% - 16px); /* 3 per row */
 }
 
-.search-form-container button[type="submit"] {
-    background-color: #002855;
-    color: #ffffff;
-    border: none;
-    padding: 8px 12px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+.halo-row > div {
+    flex: 0 0 calc(50% - 16px); /* 2 per row */
 }
 
-.search-form-container button[type="submit"]:hover {
-    background-color: #1f3a37;
-}
 
-.search-close {
-    background: none;
-    border: none;
-    color: #666;
-    cursor: pointer;
-    padding: 8px;
-    border-radius: 4px;
-}
-
-.search-close:hover {
-    background-color: #f5f5f5;
-    color: #232323;
-}
-
-/* ===== MOBILE STYLES (PURE CSS) ===== */
-
- /*for the tabs  */
- 
+/* ===== 1024px ===== */
 @media (max-width: 1024px) {
+
     .header-navigation .container {
         flex-wrap: wrap;
         position: relative;
@@ -380,12 +338,12 @@ header {
         transition: left 0.3s ease;
     }
     
-    /* Show menu when checkbox is checked */
+    /* Show menu */
     #menu-toggle:checked ~ .main-menu {
         left: 0;
     }
     
-    /* Hamburger animation when menu is open */
+    /* Hamburger animation */
     #menu-toggle:checked ~ .hamburger-menu span:nth-child(1) {
         transform: translateY(9px) rotate(45deg);
     }
@@ -398,7 +356,7 @@ header {
         transform: translateY(-9px) rotate(-45deg);
     }
     
-    /* Overlay when menu is open */
+    /* Overlay */
     #menu-toggle:checked ~ .main-menu::before {
         content: '';
         position: fixed;
@@ -410,8 +368,9 @@ header {
         z-index: -1;
     }
     
-    /* Mobile menu styles */
+    /* Mobile menu */
     .main-menu > ul {
+        display: flex;
         flex-direction: column;
     }
     
@@ -426,7 +385,7 @@ header {
         display: inline-block;
     }
     
-    /* Dropdown labels for mobile */
+    /* Dropdown */
     .dropdown-label {
         display: block;
         position: absolute;
@@ -449,26 +408,18 @@ header {
         transition: transform 0.3s ease;
     }
     
-    /* Rotate arrow when dropdown is open */
     .dropdown-toggle:checked + .dropdown-label::after {
         transform: translateY(-50%) rotate(180deg);
     }
     
-    /* Hide submenus by default */
     .main-menu ul ul {
         display: none;
         position: static;
-        opacity: 1;
-        visibility: visible;
-        transform: none;
-        box-shadow: none;
         padding-left: 15px;
         background-color: #f9f9f9;
-        margin: 0;
         width: 100%;
     }
     
-    /* Show submenu when checkbox is checked */
     .dropdown-toggle:checked ~ ul {
         display: block;
     }
@@ -477,24 +428,20 @@ header {
         padding: 12px 0;
     }
     
-    /* Products */
-    .products-grid {
-        grid-template-columns: repeat(3, 1fr);
+    /* FLEX RESPONSIVE */
+    .products-grid .product {
+        flex: 0 0 calc(33.33% - 16px); /* 3 per row */
     }
     
-    .reviews-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .halo-row {
-        grid-template-columns: repeat(2, 1fr);
+    .reviews-grid .review {
+        flex: 0 0 calc(50% - 16px); /* 2 per row */
     }
 }
 
-/*for the mobiles */
 
+/* ===== 768px ===== */
 @media (max-width: 768px) {
-    /* Announcement Bar */
+
     .announcement-bar .container {
         animation: none;
         flex-wrap: wrap;
@@ -506,7 +453,6 @@ header {
         margin: 5px 0;
     }
     
-    /* Header */
     .header-logo img {
         max-width: 90px;
     }
@@ -520,7 +466,6 @@ header {
         display: none;
     }
     
-    /* Search */
     .search-form-container {
         position: fixed;
         top: 70px;
@@ -533,61 +478,66 @@ header {
         display: none;
     }
     
-    /* Products */
-    .products-grid {
-        grid-template-columns: repeat(2, 1fr);
+    /* FLEX RESPONSIVE */
+    .products-grid .product {
+        flex: 0 0 calc(50% - 16px); /* 2 per row */
     }
     
     .products-flex .product {
         flex: 0 0 calc(50% - 8px);
     }
     
-    /* Slideshow */
-    .slideshow .item {
-        width: calc(33.33% - 7px);
+    .slideshow {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
     }
     
-    /* Footer */
+    .slideshow .item {
+        flex: 0 0 calc(33.33% - 10px);
+    }
+    
     .footer-columns {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
     }
     
     .footer-logo img {
         max-width: 30%;
     }
     
-    .reviews-grid {
-        grid-template-columns: 1fr;
+    .reviews-grid .review {
+        flex: 0 0 100%; /* 1 per row */
     }
     
     .footer__content-bottom .container {
+        display: flex;
         flex-direction: column;
         gap: 15px;
         text-align: center;
     }
     
-    .payment-methods {
-        justify-content: center;
-    }
-    
+    .payment-methods,
     .social-links {
+        display: flex;
         justify-content: center;
     }
 }
 
-/*for the small phones */
 
+/* ===== 480px ===== */
 @media (max-width: 480px) {
-    .products-grid {
-        grid-template-columns: 1fr;
+
+    .products-grid .product {
+        flex: 0 0 100%; /* 1 per row */
     }
     
-    .halo-row {
-        grid-template-columns: 1fr;
+    .halo-row > div {
+        flex: 0 0 100%;
     }
     
     .slideshow .item {
-        width: calc(50% - 5px);
+        flex: 0 0 calc(50% - 5px);
     }
     
     .header-search form {
@@ -595,6 +545,7 @@ header {
     }
     
     .header-icons {
+        display: flex;
         flex-wrap: wrap;
         justify-content: flex-end;
     }
@@ -604,6 +555,7 @@ header {
         max-width: 100%;
     }
 }
+
 
 /* ===== SLIDESHOW SECTIONS ===== */
 .slideshow {
@@ -620,8 +572,7 @@ header {
 }
 
 .slideshow .item {
-    flex: 0 0 auto;
-    width: calc(20% - 8px);
+    flex: 0 0 calc(20% - 8px);
     scroll-snap-align: start;
     border-radius: 8px;
     overflow: hidden;
@@ -640,9 +591,9 @@ header {
     transform: scale(1.02);
 }
 
-/* First slideshow (video) full width */
+/* First slideshow full width */
 .slideshow:first-of-type .item {
-    width: 100%;
+    flex: 0 0 100%;
 }
 
 .slideshow:first-of-type video {
@@ -695,11 +646,16 @@ header {
     color: #eb492f;
 }
 
-/* Products Grid */
+/* Products Flex/Grid Replacement */
 .products-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     gap: 15px;
+}
+
+.products-grid .product {
+    flex: 0 0 calc(25% - 15px);
+    min-width: 200px;
 }
 
 .products-flex {
@@ -707,18 +663,6 @@ header {
     gap: 30px;
     overflow-x: auto;
     padding-bottom: 20px;
-}
-
-.products-flex::-webkit-scrollbar {
-    height: 4px;
-}
-
-.products-flex::-webkit-scrollbar-track {
-    background: #f1f1f1;
-}
-
-.products-flex::-webkit-scrollbar-thumb {
-    background: #000000;
 }
 
 .products-flex .product {
@@ -794,7 +738,7 @@ header {
     opacity: 1;
 }
 
-/* Size List */
+/* Sizes List */
 .sizes-list {
     display: flex;
     justify-content: center;
@@ -833,10 +777,6 @@ header {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-}
-
-.card-title:hover {
-    color: #232323;
 }
 
 .card-price {
@@ -904,11 +844,16 @@ header {
     margin-top: 10px;
 }
 
+/* Halo Row Flex */
 .halo-row {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     gap: 0;
     margin-top: 30px;
+}
+
+.halo-row > div {
+    flex: 0 0 25%;
 }
 
 .halo-item a {
@@ -947,13 +892,16 @@ header {
     margin-bottom: 30px;
 }
 
+/* Reviews Flex */
 .reviews-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     gap: 20px;
 }
 
 .review-item {
+    flex: 0 0 calc(25% - 20px);
+    min-width: 200px;
     background-color: #f9f9f9;
     padding: 20px;
     border-radius: 8px;
@@ -965,38 +913,7 @@ header {
     transform: translateY(-5px);
 }
 
-.review-rating {
-    color: #ffc107;
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.review-title {
-    font-weight: 600;
-    font-size: 16px;
-    margin-bottom: 10px;
-    color: #232323;
-}
-
-.review-body {
-    font-size: 14px;
-    color: #666;
-    margin-bottom: 15px;
-    line-height: 1.5;
-}
-
-.reviewer-name {
-    font-weight: 600;
-    color: #232323;
-    margin-bottom: 5px;
-}
-
-.review-date {
-    font-size: 12px;
-    color: #999;
-}
-
-/* ===== FOOTER STYLES ===== */
+/* ===== FOOTER ===== */
 .footer {
     background-color: #1f3a37;
     color: #cfcfcf;
@@ -1015,10 +932,15 @@ header {
     height: auto;
 }
 
+/* Footer Columns Flex */
 .footer-columns {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     gap: 30px;
+}
+
+.footer-column {
+    flex: 0 0 calc(50% - 30px);
 }
 
 .footer-column h2 {
@@ -1135,33 +1057,14 @@ header {
 
 /* ===== ANIMATIONS ===== */
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(20px);}
+    to { opacity: 1; transform: translateY(0);}
 }
 
-.product {
-    animation: fadeIn 0.5s ease-out;
-}
+.product { animation: fadeIn 0.5s ease-out; }
 
-/* ===== UTILITY CLASSES ===== */
-.text-center {
-    text-align: center;
-}
-
-.text-left {
-    text-align: left;
-}
-
-.text-right {
-    text-align: right;
-}
-
-.hidden {
-    display: none;
-}
+/* ===== UTILITIES ===== */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.hidden { display: none; }
