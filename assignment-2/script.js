@@ -1,8 +1,3 @@
-/**
- * Assignment 2: Responsive Top Menu (Vanilla JavaScript)
- * Author: Antigravity
- * Description: Manages the mobile navigation toggle and auto-close behavior.
- */
 
 document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.getElementById('hamburger-menu');

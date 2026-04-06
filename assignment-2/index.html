@@ -9,8 +9,11 @@
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
-    <!-- Your Custom CSS -->
+    <!-- CSS file link-->
     <link rel="stylesheet" href="styles.css">
+
+    <!-- JavaScript file link (with defer modern best practice) -->
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -27,19 +30,18 @@
         
         <div class="header-navigation">
             <div class="container">
-                <!-- Hamburger Menu Button (JS controlled) -->
-                <div id="hamburger-menu" class="hamburger-menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                
                 <div class="header-logo">
                     <a href="/">
                         <img src="//royaltag.com.pk/cdn/shop/files/Asset_1100_125x.png?v=1771415185" alt="RoyalTag" width="125" height="19">
                     </a>
                 </div>
                 
+                <div id="hamburger-menu" class="hamburger-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
                 <!-- Main Menu -->
                 <nav class="main-menu">
                     <ul>
@@ -121,25 +123,13 @@
                 
                 <!-- Header Icons -->
                 <div class="header-icons">
-                    <!-- Search (Always visible) -->
+                    <!-- for teh Search -->
                     <div class="header-search">
                         <label for="search-toggle" class="search-toggle">
                             <i class="fas fa-search"></i>
                         </label>
-                        <input type="checkbox" id="search-toggle" class="search-toggle-checkbox">
-                        <div class="search-form-container">
-                            <form action="/search" method="get" role="search">
-                                <input type="search" name="q" placeholder="Search" autocomplete="off">
-                                <button type="submit" aria-label="Search">
-                                    <i class="fas fa-search"></i>
-                                </button>
-                                <label for="search-toggle" class="search-close">
-                                    <i class="fas fa-times"></i>
-                                </label>
-                            </form>
-                        </div>
                     </div>
-                    
+
                     <a href="/account/login" class="header-account">
                         <i class="far fa-user"></i>
                     </a>
@@ -224,7 +214,7 @@
                 </div>
                 
                 <div class="products-grid">
-                    <!-- Product 1 -->
+                    <!-- Product 1 ------------------------------>
                     <div class="product">
                         <div class="card">
                             <div class="card-product">
@@ -233,7 +223,7 @@
                                 </div>
                                 <div class="card-media">
                                     <img src="images/product1.webp" alt="Navy Signature Polo">
-                                    <img src="images/product1-2.webp" alt="Navy Signature Polo">
+                                    <img src="images/product2.webp" alt="Navy Signature Polo">
                                 </div>
                                 <a href="product1 link" title="Navy Signature Polo"></a>
                                 <ul class="sizes-list">
@@ -253,7 +243,7 @@
                         </div>
                     </div>
                     
-                    <!-- Product 2 -->
+                    <!-- Product 2 ------------->
                     <div class="product">
                         <div class="card">
                             <div class="card-product">
@@ -262,7 +252,7 @@
                                 </div>
                                 <div class="card-media">
                                     <img src="images/product2.webp" alt="Olive Signature Polo">
-                                    <img src="images/product2-2.webp" alt="Olive Signature Polo">
+                                    <img src="images/product6.jpg" alt="Olive Signature Polo">
                                 </div>
                                 <a href="product2 link" title="Olive Signature Polo"></a>
                                 <ul class="sizes-list">
@@ -282,7 +272,7 @@
                         </div>
                     </div>
                     
-                    <!-- Product 3 -->
+                    <!-- Product 3 --------------------->
                     <div class="product">
                         <div class="card">
                             <div class="card-product">
@@ -291,7 +281,7 @@
                                 </div>
                                 <div class="card-media">
                                     <img src="images/product3.webp" alt="Black Signature Polo">
-                                    <img src="images/product3-2.webp" alt="Black Signature Polo">
+                                    <img src="images/product7.jpg" alt="Black Signature Polo">
                                 </div>
                                 <a href="product3 link" title="Black Signature Polo"></a>
                                 <ul class="sizes-list">
@@ -320,7 +310,7 @@
                                 </div>
                                 <div class="card-media">
                                     <img src="images/product4.webp" alt="Off White Signature Polo">
-                                    <img src="images/product4-2.webp" alt="Off White Signature Polo">
+                                    <img src="images/product8.webp" alt="Off White Signature Polo">
                                 </div>
                                 <a href="product4 link" title="Off White Signature Polo"></a>
                                 <ul class="sizes-list">
@@ -340,7 +330,7 @@
                         </div>
                     </div>
                     
-                    <!-- Product 5 -->
+                    <!-- Product 5 ---------------------->
                     <div class="product">
                         <div class="card">
                             <div class="card-product">
@@ -349,7 +339,7 @@
                                 </div>
                                 <div class="card-media">
                                     <img src="images/product5.webp" alt="Black Prime Polo">
-                                    <img src="images/product5-2.webp" alt="Black Prime Polo">
+                                    <img src="images/product6.jpg" alt="Black Prime Polo">
                                 </div>
                                 <a href="/product5 link" title="Black Prime Polo"></a>
                                 <ul class="sizes-list">
@@ -369,7 +359,7 @@
                         </div>
                     </div>
                     
-                    <!-- Product 6 -->
+                    <!-- Product 6 ------------------------------->
                     <div class="product">
                         <div class="card">
                             <div class="card-product">
@@ -378,7 +368,7 @@
                                 </div>
                                 <div class="card-media">
                                     <img src="images/product6.jpg" alt="Green Signature Polo">
-                                    <img src="images/product6-2.jpg" alt="Green Signature Polo">
+                                    <img src="images/product7.jpg" alt="Green Signature Polo">
                                 </div>
                                 <a href="/products/cf6904-gn" title="Green Signature Polo"></a>
                                 <ul class="sizes-list">
@@ -399,7 +389,7 @@
                         </div>
                     </div>
                     
-                    <!-- Product 7 -->
+                    <!-- Product 7 ------------------------>
                     <div class="product">
                         <div class="card">
                             <div class="card-product">
@@ -408,7 +398,7 @@
                                 </div>
                                 <div class="card-media">
                                     <img src="images/product7.jpg" alt="Pink Signature Polo">
-                                    <img src="images/product7-2.jpg" alt="Pink Signature Polo">
+                                    <img src="images/product8.webp" alt="Pink Signature Polo">
                                 </div>
                                 <a href="/product7 link" title="Pink Signature Polo"></a>
                                 <ul class="sizes-list">
@@ -429,7 +419,7 @@
                         </div>
                     </div>
                     
-                    <!-- Product 8 -->
+                    <!-- Product 8 ------------------------------>
                     <div class="product">
                         <div class="card">
                             <div class="card-product">
@@ -438,7 +428,7 @@
                                 </div>
                                 <div class="card-media">
                                     <img src="images/product8.webp" alt="Light Green Signature Polo">
-                                    <img src="images/product8-2.webp" alt="Light Green Signature Polo">
+                                    <img src="images/product7.jpg" alt="Light Green Signature Polo">
                                 </div>
                                 <a href="/products/rtsf251295-lgn" title="Light Green Signature Polo"></a>
                                 <ul class="sizes-list">
@@ -466,7 +456,8 @@
             </div>
         </section>
 
-        <!-- The Casual Edit Section (FIXED: changed from causal to casual) -->
+        <!-- The Casual Edit Section---------------------------->
+
         <section class="product-block">
             <div class="container">
                 <div class="halo-block-header">
@@ -475,7 +466,7 @@
                 </div>
                 
                 <div class="products-flex">
-                    <!-- Product 1 -->
+                    <!-- Product 1 ------------------->
                     <div class="product">
                         <div class="card">
                             <div class="card-product">
@@ -483,8 +474,8 @@
                                     <span class="badge new-badge">New</span>
                                 </div>
                                 <div class="card-media">
-                                    <img src="images/casual-product1.webp" alt="Navy Prestige Casual Shirt">
-                                    <img src="images/casual-product1-2.webp" alt="Navy Prestige Casual Shirt">
+                                    <img src="images/causal-product1.webp" alt="Navy Prestige Casual Shirt">
+                                    <img src="images/causal-product2.webp" alt="Navy Prestige casual shirt shown from a second angle on a clean neutral background with a polished retail presentation">
                                 </div>
                                 <a href="/products/skc250023-ny" title="Navy Prestige Casual Shirt"></a>
                                 <ul class="sizes-list">
@@ -504,7 +495,7 @@
                         </div>
                     </div>
                     
-                    <!-- Product 2 -->
+                    <!-- Product 2 ------------------------->
                     <div class="product">
                         <div class="card">
                             <div class="card-product">
@@ -512,8 +503,8 @@
                                     <span class="badge new-badge">New</span>
                                 </div>
                                 <div class="card-media">
-                                    <img src="images/casual-product2.webp" alt="Beige Heritage Casual Shirt">
-                                    <img src="images/casual-product2-2.webp" alt="Beige Heritage Casual Shirt">
+                                    <img src="images/causal-product2.webp" alt="Beige Heritage Casual Shirt">
+                                    <img src="images/causal-product5.webp" alt="Beige Heritage Casual Shirt">
                                 </div>
                                 <a href="/products/tc251129-bg" title="Beige Heritage Casual Shirt"></a>
                                 <ul class="sizes-list">
@@ -533,7 +524,7 @@
                         </div>
                     </div>
                     
-                    <!-- Product 3 -->
+                    <!-- Product 3 ------------------------>
                     <div class="product">
                         <div class="card">
                             <div class="card-product">
@@ -541,8 +532,8 @@
                                     <span class="badge new-badge">New</span>
                                 </div>
                                 <div class="card-media">
-                                    <img src="images/casual-product3.webp" alt="Black Heritage Casual Shirt">
-                                    <img src="images/casual-product3-2.webp" alt="Black Heritage Casual Shirt">
+                                    <img src="images/causal-product3.webp" alt="Black Heritage Casual Shirt">
+                                    <img src="images/causal-product7.webp" alt="Black Heritage Casual Shirt">
                                 </div>
                                 <a href="/products/ps251221-bk" title="Black Heritage Casual Shirt"></a>
                                 <ul class="sizes-list">
@@ -562,7 +553,7 @@
                         </div>
                     </div>
                     
-                    <!-- Product 4 -->
+                    <!-- Product 4 -------------------------->
                     <div class="product">
                         <div class="card">
                             <div class="card-product">
@@ -570,8 +561,8 @@
                                     <span class="badge new-badge">New</span>
                                 </div>
                                 <div class="card-media">
-                                    <img src="images/casual-product4.webp" alt="Maroon Prestige Casual Shirt">
-                                    <img src="images/casual-product4-2.webp" alt="Maroon Prestige Casual Shirt">
+                                    <img src="images/causal-product4.webp" alt="Maroon Prestige Casual Shirt">
+                                    <img src="images/causal-product6.webp" alt="Maroon Prestige Casual Shirt">
                                 </div>
                                 <a href="/products/ps251218-mr" title="Maroon Prestige Casual Shirt"></a>
                                 <ul class="sizes-list">
@@ -591,7 +582,7 @@
                         </div>
                     </div>
                     
-                    <!-- Product 5 -->
+                    <!-- Product 5 -------------------------->
                     <div class="product">
                         <div class="card">
                             <div class="card-product">
@@ -599,8 +590,8 @@
                                     <span class="badge new-badge">New</span>
                                 </div>
                                 <div class="card-media">
-                                    <img src="images/casual-product5.webp" alt="Black Heritage Casual Shirt">
-                                    <img src="images/casual-product5-2.webp" alt="Black Heritage Casual Shirt">
+                                    <img src="images/causal-product5.webp" alt="Black Heritage Casual Shirt">
+                                    <img src="images/causal-product7.webp" alt="Black Heritage Casual Shirt">
                                 </div>
                                 <a href="/products/tc251130-bk" title="Black Heritage Casual Shirt"></a>
                                 <ul class="sizes-list">
@@ -620,7 +611,7 @@
                         </div>
                     </div>
                     
-                    <!-- Product 6 -->
+                    <!-- Product 6 ----------------------------->
                     <div class="product">
                         <div class="card">
                             <div class="card-product">
@@ -628,8 +619,8 @@
                                     <span class="badge new-badge">New</span>
                                 </div>
                                 <div class="card-media">
-                                    <img src="images/casual-product6.webp" alt="Black Heritage Casual Shirt">
-                                    <img src="images/casual-product6-2.webp" alt="Black Heritage Casual Shirt">
+                                    <img src="images/causal-product6.webp" alt="Black Heritage Casual Shirt">
+                                    <img src="images/causal-product8.webp" alt="Black Heritage Casual Shirt">
                                 </div>
                                 <a href="/products/ckt251059-bk" title="Black Heritage Casual Shirt"></a>
                                 <ul class="sizes-list">
@@ -649,7 +640,7 @@
                         </div>
                     </div>
                     
-                    <!-- Product 7 -->
+                    <!-- Product 7 --------------------------->
                     <div class="product">
                         <div class="card">
                             <div class="card-product">
@@ -657,8 +648,8 @@
                                     <span class="badge new-badge">New</span>
                                 </div>
                                 <div class="card-media">
-                                    <img src="images/casual-product7.webp" alt="Beige Heritage Casual Shirt">
-                                    <img src="images/casual-product7-2.webp" alt="Beige Heritage Casual Shirt">
+                                    <img src="images/causal-product7.webp" alt="Beige Heritage Casual Shirt">
+                                    <img src="images/causal-product9.webp" alt="Beige Heritage Casual Shirt">
                                 </div>
                                 <a href="/products/ckt251058-bg" title="Beige Heritage Casual Shirt"></a>
                                 <ul class="sizes-list">
@@ -678,7 +669,7 @@
                         </div>
                     </div>
                     
-                    <!-- Product 8 -->
+                    <!-- Product 8 --------------->
                     <div class="product">
                         <div class="card">
                             <div class="card-product">
@@ -686,8 +677,8 @@
                                     <span class="badge new-badge">New</span>
                                 </div>
                                 <div class="card-media">
-                                    <img src="images/casual-product8.webp" alt="White Heritage Casual Shirt">
-                                    <img src="images/casual-product8-2.webp" alt="White Heritage Casual Shirt">
+                                    <img src="images/causal-product8.webp" alt="White Heritage Casual Shirt">
+                                    <img src="images/causal-product9.webp" alt="White Heritage Casual Shirt">
                                 </div>
                                 <a href="/products/skc250025-wt" title="White Heritage Casual Shirt"></a>
                                 <ul class="sizes-list">
@@ -707,7 +698,7 @@
                         </div>
                     </div>
                     
-                    <!-- Product 9 -->
+                    <!-- Product 9 ----------------------------->
                     <div class="product">
                         <div class="card">
                             <div class="card-product">
@@ -715,8 +706,8 @@
                                     <span class="badge new-badge">New</span>
                                 </div>
                                 <div class="card-media">
-                                    <img src="images/casual-product9.webp" alt="White Heritage Casual Shirt">
-                                    <img src="images/casual-product9-2.webp" alt="White Heritage Casual Shirt">
+                                    <img src="images/causal-product9.webp" alt="White Heritage Casual Shirt">
+                                    <img src="images/causal-product10.webp" alt="White Heritage Casual Shirt">
                                 </div>
                                 <a href="/products/ckt251060-wt" title="White Heritage Casual Shirt"></a>
                                 <ul class="sizes-list">
@@ -736,7 +727,7 @@
                         </div>
                     </div>
                     
-                    <!-- Product 10 -->
+                    <!-- Product 10 --------------------------------->
                     <div class="product">
                         <div class="card">
                             <div class="card-product">
@@ -744,8 +735,8 @@
                                     <span class="badge new-badge">New</span>
                                 </div>
                                 <div class="card-media">
-                                    <img src="images/casual-product10.webp" alt="Brown Heritage Casual Shirt">
-                                    <img src="images/casual-product10-2.webp" alt="Brown Heritage Casual Shirt">
+                                    <img src="images/causal-product10.webp" alt="Brown Heritage Casual Shirt">
+                                    <img src="images/causal-product9.webp" alt="Brown Heritage Casual Shirt">
                                 </div>
                                 <a href="/products/ps250930-br" title="Brown Heritage Casual Shirt"></a>
                                 <ul class="sizes-list">
@@ -768,7 +759,8 @@
             </div>
         </section>
 
-        <!-- Festive Essentials Section -->
+        <!-- Festive Essentials Section ---------------------------------------->
+
         <section class="product-block">
             <div class="container">
                 <div class="halo-block-header">
@@ -777,7 +769,7 @@
                 </div>
                 
                 <div class="products-flex">
-                    <!-- Product 1 -->
+                    <!-- Product 1 ------------------->
                     <div class="product">
                         <div class="card">
                             <div class="card-product">
@@ -786,7 +778,7 @@
                                 </div>
                                 <div class="card-media">
                                     <img src="images/festive-product1.webp" alt="White Prestige Shalwar Kameez">
-                                    <img src="images/festive-product1-2.webp" alt="White Prestige Shalwar Kameez">
+                                    <img src="images/festive-product5.webp" alt="White Prestige Shalwar Kameez">
                                 </div>
                                 <a href="/products/sk251216-wt" title="White Prestige Shalwar Kameez"></a>
                                 <ul class="sizes-list">
@@ -804,7 +796,7 @@
                         </div>
                     </div>
                     
-                    <!-- Product 2 -->
+                    <!-- Product 2 ------------------------------>
                     <div class="product">
                         <div class="card">
                             <div class="card-product">
@@ -813,7 +805,7 @@
                                 </div>
                                 <div class="card-media">
                                     <img src="images/festive-product2.webp" alt="Sky Blue Heritage Shalwar Kameez">
-                                    <img src="images/festive-product2-2.webp" alt="Sky Blue Heritage Shalwar Kameez">
+                                    <img src="images/festive-product6.webp" alt="Sky Blue Heritage Shalwar Kameez">
                                 </div>
                                 <a href="/products/sk251214-sky" title="Sky Blue Heritage Shalwar Kameez"></a>
                                 <ul class="sizes-list">
@@ -833,7 +825,7 @@
                         </div>
                     </div>
                     
-                    <!-- Product 3 -->
+                    <!-- Product 3 ----------------------->
                     <div class="product">
                         <div class="card">
                             <div class="card-product">
@@ -842,7 +834,7 @@
                                 </div>
                                 <div class="card-media">
                                     <img src="images/festive-product3.webp" alt="Off White Prestige Waistcoat">
-                                    <img src="images/festive-product3-2.webp" alt="Off White Prestige Waistcoat">
+                                    <img src="images/festive-product8.webp" alt="Off White Prestige Waistcoat">
                                 </div>
                                 <a href="/products/rwc251226-ow" title="Off White Prestige Waistcoat"></a>
                                 <ul class="sizes-list">
@@ -872,7 +864,7 @@
                                 </div>
                                 <div class="card-media">
                                     <img src="images/festive-product4.jpg" alt="Off White Sovereign Shalwar Kameez">
-                                    <img src="images/festive-product4-2.webp" alt="Off White Sovereign Shalwar Kameez">
+                                    <img src="images/festive-product8.webp" alt="Off White Sovereign Shalwar Kameez">
                                 </div>
                                 <a href="/products/sk251142-ow" title="Off White Sovereign Shalwar Kameez"></a>
                                 <ul class="sizes-list">
@@ -901,7 +893,7 @@
                                 </div>
                                 <div class="card-media">
                                     <img src="images/festive-product5.webp" alt="Beige Sovereign Waistcoat">
-                                    <img src="images/festive-product5-2.webp" alt="Beige Sovereign Waistcoat">
+                                    <img src="images/festive-product6.webp" alt="Beige Sovereign Waistcoat">
                                 </div>
                                 <a href="/products/rwc251216-bg" title="Beige Sovereign Waistcoat"></a>
                                 <ul class="sizes-list">
@@ -930,7 +922,7 @@
                                 </div>
                                 <div class="card-media">
                                     <img src="images/festive-product6.webp" alt="Off White Royale Waistcoat">
-                                    <img src="images/festive-product6-2.webp" alt="Off White Royale Waistcoat">
+                                    <img src="images/festive-product7.jpg" alt="Off White Royale Waistcoat">
                                 </div>
                                 <a href="/products/rwc251244-ow" title="Off White Royale Waistcoat"></a>
                                 <ul class="sizes-list">
@@ -960,7 +952,7 @@
                                 </div>
                                 <div class="card-media">
                                     <img src="images/festive-product7.webp" alt="Navy Heritage Shalwar Kameez">
-                                    <img src="images/festive-product7-2.webp" alt="Navy Heritage Shalwar Kameez">
+                                    <img src="images/festive-product8.webp" alt="Navy Heritage Shalwar Kameez">
                                 </div>
                                 <a href="/products/sk251112-ny" title="Navy Heritage Shalwar Kameez"></a>
                                 <ul class="sizes-list">
@@ -989,7 +981,7 @@
                                 </div>
                                 <div class="card-media">
                                     <img src="images/festive-product8.webp" alt="Navy Royale Waistcoat">
-                                    <img src="images/festive-product8-2.webp" alt="Navy Royale Waistcoat">
+                                    <img src="images/festive-product9.webp" alt="Navy Royale Waistcoat">
                                 </div>
                                 <a href="/products/rwc251128-ny" title="Navy Royale Waistcoat"></a>
                                 <ul class="sizes-list">
@@ -1019,7 +1011,7 @@
                                 </div>
                                 <div class="card-media">
                                     <img src="images/festive-product9.webp" alt="Black Royale Waistcoat">
-                                    <img src="images/festive-product9-2.webp" alt="Black Royale Waistcoat">
+                                    <img src="images/festive-product10.jpg" alt="Black Royale Waistcoat">
                                 </div>
                                 <a href="/products/rwc251127-bk" title="Black Royale Waistcoat"></a>
                                 <ul class="sizes-list">
@@ -1048,7 +1040,7 @@
                                 </div>
                                 <div class="card-media">
                                     <img src="images/festive-product10.webp" alt="Black Heritage Shalwar Kameez">
-                                    <img src="images/festive-product10-2.webp" alt="Black Heritage Shalwar Kameez">
+                                    <img src="images/festive-product9.webp" alt="Black Heritage Shalwar Kameez">
                                 </div>
                                 <a href="/products/sk251062-bk" title="Black Heritage Shalwar Kameez"></a>
                                 <ul class="sizes-list">
@@ -1071,7 +1063,10 @@
             </div>
         </section>
 
-        <!-- Shop by Style Section -->
+
+
+        <!-- Shop by Style Section --------------------->
+
         <section class="custom-image-banner-block">
             <div class="container">
                 <div class="halo-block-header">
@@ -1107,7 +1102,8 @@
             </div>
         </section>
 
-        <!-- Reviews Section -->
+        <!-- Reviews Section ---------------------->
+
         <section class="reviews">
             <div class="container">
                 <h2>Let customers speak for us</h2>
@@ -1116,7 +1112,13 @@
                 <div class="reviews-grid">
                     <!-- Review 1 -->
                     <div class="review-item">
-                        <div class="review-rating">★★★★★</div>
+                        <div class="review-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
                         <div class="review-title">Good quality product</div>
                         <div class="review-body">Good quality product. Satisfied</div>
                         <div class="reviewer-name">Muhammad Ali Awan</div>
@@ -1125,7 +1127,13 @@
                     
                     <!-- Review 2 -->
                     <div class="review-item">
-                        <div class="review-rating">★★★★★</div>
+                        <div class="review-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
                         <div class="review-title">Fabric quality is too</div>
                         <div class="review-body">Fabric quality is too good</div>
                         <div class="reviewer-name">Anonymous</div>
@@ -1134,7 +1142,13 @@
                     
                     <!-- Review 3 -->
                     <div class="review-item">
-                        <div class="review-rating">★★★★★</div>
+                        <div class="review-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
                         <div class="review-title">Outclass Fabric</div>
                         <div class="review-body">Outclass Fabric, Quick delivery and It was Great experience With Royal Tag.</div>
                         <div class="reviewer-name">Anonymous</div>
@@ -1143,7 +1157,13 @@
                     
                     <!-- Review 4 -->
                     <div class="review-item">
-                        <div class="review-rating">★★★★★</div>
+                        <div class="review-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
                         <div class="review-title">Superb</div>
                         <div class="review-body">Superb</div>
                         <div class="reviewer-name">Syeda Rizvi</div>
@@ -1153,6 +1173,7 @@
             </div>
         </section>
     </main>
+
 
     <!-- Footer Section -->
     <footer class="footer">
@@ -1178,7 +1199,7 @@
                         </ul>
                     </div>
                     
-                    <!-- Need Help -->
+                    <!-- Need Help ------------------->
                     <div class="footer-column">
                         <h2>NEED HELP?</h2>
                         <div class="footer-help-content">
@@ -1244,8 +1265,6 @@
             </div>
         </div>
     </footer>
-
-    <!-- Vanilla JavaScript for Responsive Menu -->
-    <script src="script.js"></script>
+    
 </body>
 </html>
