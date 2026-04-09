@@ -551,9 +551,49 @@ header {
         max-width: 100%;
     }
 }
+/* ===== SLIDESHOW RESPONSIVE - ADD THIS ===== */
 
+/* Default: Desktop - 5 images in a row */
+.slideshow .container {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.slideshow .item {
+    flex: 0 0 calc(20% - 8px);  /* 5 items per row */
+    scroll-snap-align: start;
+}
+
+/* 1024px - 3 images visible */
+@media (max-width: 1024px) {
+    .slideshow .item {
+        flex: 0 0 calc(33.33% - 10px);  /* 3 per row */
+    }
+}
+
+/* 768px - 2 images visible */
+@media (max-width: 768px) {
+    .slideshow .item {
+        flex: 0 0 calc(50% - 10px);  /* 2 per row */
+    }
+}
+
+/* 480px - 1 image (stack vertically) */
+@media (max-width: 480px) {
+    .slideshow .container {
+        flex-wrap: wrap;        /* Wrap to next line */
+        overflow-x: visible;    /* Remove horizontal scroll */
+    }
+    
+    .slideshow .item {
+        flex: 0 0 100%;         /* Full width */
+    }
+}
 
 /* ===== SLIDESHOW SECTIONS ===== */
+/*
 .slideshow {
     margin: 30px 0;
     width: 100%;
