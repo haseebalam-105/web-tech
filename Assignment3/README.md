@@ -1,4 +1,4 @@
-# Dynamic Product Catalog 🛒
+# Dynamic Product Catalog 
 
 This project upgrades a static e-commerce HTML/CSS interface into a fully dynamic, database-driven web application. It uses the MERN stack (specifically MongoDB, Express, and EJS) to manage and render product data dynamically while preserving the original UI aesthetics.
 
