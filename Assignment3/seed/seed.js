@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const Product = require("../models/Product");
 
+//Connection of MongoDB for seeding the database
 mongoose.connect("mongodb://127.0.0.1:27017/assignment3")
 .then(() => console.log("DB connected for seeding"))
 .catch(err => console.error(err));
@@ -21,7 +22,7 @@ for (let i = 1; i <= 30; i++) {
         name: name,
         price: Math.floor(Math.random() * 5000) + 3000, 
         category: category,
-        rating: (Math.random() * 1 + 4).toFixed(1),
+        rating: Number((Math.random() * 1 + 4).toFixed(1)),
         stock: Math.floor(Math.random() * 8) + 1 
     });
 }
