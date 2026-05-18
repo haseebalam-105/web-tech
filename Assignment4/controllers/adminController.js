@@ -30,9 +30,12 @@ exports.getDashboard = async (req, res) => {
     }
 };
 
+//Open the forms for teh admin to add a new product or edit an existing product.
+
 exports.getNewProduct = (req, res) => {
     res.render("admin/new", { error: null });
 };
+
 
 exports.postNewProduct = async (req, res) => {
     try {
