@@ -24,11 +24,11 @@ router.use(isAdmin);
 router.get("/", adminController.getDashboard);
 
 // CRUD Routes
-router.get("/products/new",         adminController.getNewProduct);
-router.post("/products/new",        upload.single("image"), adminController.postNewProduct);
+router.get("/products/new", adminController.getNewProduct);
+router.post("/products/new", upload.single("image"), adminController.postNewProduct);
 
-router.get("/products/edit/:id",    adminController.getEditProduct);
-router.post("/products/edit/:id",   upload.single("image"), adminController.postEditProduct);
+router.get("/products/edit/:id", adminController.getEditProduct);
+router.post("/products/edit/:id", upload.single("image"), adminController.postEditProduct);
 
 router.post("/products/delete/:id", adminController.deleteProduct);
 

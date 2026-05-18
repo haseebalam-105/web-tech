@@ -1,7 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const session = require("express-session");
-const { MongoStore } = require("connect-mongo");    // named import — required for v5/v6
+const { MongoStore } = require("connect-mongo");   
 const flash = require("connect-flash");
 
 const productRoutes = require("./routes/productRoutes");
@@ -18,7 +18,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // Session — stored persistently in MongoDB
 app.use(session({
-    secret: process.env.SESSION_SECRET || "assignment4_secret",
+    secret: "assignment4_secret",
     resave: false,
     saveUninitialized: false,
     store: MongoStore.create({
