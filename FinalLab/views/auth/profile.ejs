@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile | Royal Tag</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="/css/styles.css">
+  <style>
+    .profile-page { min-height: 80vh; display: flex; align-items: center; justify-content: center; padding: 3rem 1rem; background: #f7f7f7; }
+    .profile-card { background: #fff; border-radius: 14px; box-shadow: 0 4px 24px rgba(0,0,0,0.09); padding: 2.5rem 2rem; width: 100%; max-width: 480px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    .profile-avatar { width: 80px; height: 80px; border-radius: 50%; background: #00b4d8; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 32px; font-weight: 700; margin: 0 auto 1.2rem; }
+    .profile-card h2 { text-align: center; font-size: 20px; color: #2c3e50; margin: 0 0 4px; }
+    .profile-badge { text-align: center; margin-bottom: 1.5rem; }
+    .badge { display: inline-block; padding: 3px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+    .badge-admin    { background: #1a1a2e; color: #00b4d8; }
+    .badge-customer { background: #e8f4fd; color: #0096c7; }
+    .profile-info { border-top: 1px solid #f0f0f0; padding-top: 1.2rem; }
+    .info-row { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #f5f5f5; font-size: 14px; }
+    .info-row .label { color: #888; font-weight: 500; }
+    .info-row .value { color: #2c3e50; font-weight: 600; }
+    .profile-actions { margin-top: 1.5rem; display: flex; flex-direction: column; gap: 10px; }
+    .btn-profile { display: block; text-align: center; padding: 11px; border-radius: 7px; font-size: 14px; font-weight: 600; text-decoration: none; cursor: pointer; border: none; transition: opacity 0.2s; }
+    .btn-admin   { background: #1a1a2e; color: #00b4d8; }
+    .btn-logout  { background: #e74c3c; color: #fff; }
+    .btn-back    { background: #f0f0f0; color: #555; }
+    .btn-profile:hover { opacity: 0.85; }
+  </style>
+</head>
+<body>
+  <div class="profile-page">
+    <div class="profile-card">
+      <div class="profile-avatar"><%= user.name.charAt(0).toUpperCase() %></div>
+      <h2><%= user.name %></h2>
+      <div class="profile-badge">
+        <span class="badge <%= user.role === 'admin' ? 'badge-admin' : 'badge-customer' %>"><%= user.role %></span>
+      </div>
+
+      <% if (flashError && flashError.length > 0) { %>
+        <div style="background:#fff0f0;color:#c0392b;padding:10px 14px;border-radius:6px;font-size:13px;margin-bottom:12px;"><%= flashError[0] %></div>
+      <% } %>
+      <% if (flashSuccess && flashSuccess.length > 0) { %>
+        <div style="background:#f0fff4;color:#1e7e3e;padding:10px 14px;border-radius:6px;font-size:13px;margin-bottom:12px;"><%= flashSuccess[0] %></div>
+      <% } %>
+
+      <div class="profile-info">
+        <div class="info-row">
+          <span class="label">Name</span>
+          <span class="value"><%= user.name %></span>
+        </div>
+        <div class="info-row">
+          <span class="label">Email</span>
+          <span class="value"><%= user.email %></span>
+        </div>
+        <div class="info-row">
+          <span class="label">Role</span>
+          <span class="value"><%= user.role %></span>
+        </div>
+        <div class="info-row">
+          <span class="label">Member since</span>
+          <span class="value"><%= new Date(user.createdAt).toLocaleDateString('en-PK', { year:'numeric', month:'long', day:'numeric' }) %></span>
+        </div>
+      </div>
+
+      <div class="profile-actions">
+        <% if (user.role === 'admin') { %>
+          <a href="/admin" class="btn-profile btn-admin">Admin Panel</a>
+        <% } %>
+        <a href="/logout" class="btn-profile btn-logout">Logout</a>
+        <a href="/" class="btn-profile btn-back">← Back to Store</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
